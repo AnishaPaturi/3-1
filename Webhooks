@@ -1,0 +1,33 @@
+Step 1 : 
+  New Item : Webhooks 
+  Pipeline
+Step 2 :
+  Script -> Hello World 
+  apply and save 
+  Build Now 
+Step 3 : 
+  Script -> Pipeline Syntax 
+    checkout : 
+      git -> https://github.com/AnishaPaturi/Maven-Library.git
+      credentials :  Add :
+        username : Anisha Paturi (-> Git username)
+        Password : ************* (Settings -> Web developer -> CLassic Tokens -> Classic Tokens -> Create a new token -> Check everything -> Set an expiry Time and create a new Token -> that code is the password here)
+        ID : webtoken
+      Branch : main
+      Generate Token -> Copy the token and put it instad of echo 
+Step 4 :
+  Apply and save -> Build Now 
+Step 5 : 
+  Open ngrok http <port_number_same_as_Jenkins_port>
+  copy url 
+Step 6 : 
+  In git repo -> settings 
+  webhooks -> new webhook 
+  payload Url - paste the ngrok link/github/webhook/
+  save 
+Step 7 : 
+  Make a commit to check the working 
+  
+  
+
+
