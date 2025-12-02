@@ -1,0 +1,32 @@
+Build : 
+  Step 1 : 
+    New Item : maven_java_build
+    Freestyle
+  Step 2 : 
+    Description : Maven Java Build Demo
+    Git : Maven Java : https://github.com/AnishaPaturi/Maven-Java.git
+    Branch -> main
+  Step 3 : Build 
+    Invoke top-level Maven targets 
+      clean 
+      install
+  Step 4 : Post Build
+    Archive the artifacts : **/*
+    Build on other projetcs : maven_java_build
+  Step 5 : Apply and save 
+    Build now
+
+Test : 
+  Step 1 : 
+      New Item : maven_java_build
+      Freestyle
+    Step 2 : 
+      Description : Maven Java Build Demo
+      none 
+      Delete Workspace 
+    Step 3 : Build 
+      Copy artifacts from another project : maven_java_build; **/*
+    Step 4 : Post Build
+      Archive the artifacts : **/*
+    Step 5 : Apply and save 
+      Build now
