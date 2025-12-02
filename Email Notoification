@@ -1,0 +1,9 @@
+Manage Settings : System 
+  E-Mail Notification : 
+    SMTP server : smtp.gmail.com
+    Advanced :   
+      Copy the app pwd 
+      Check Use SMtp Authentication : an email and paste the pwd 
+      Check Test Use SSL : Write the port Number : 465
+      Check the test Configuration : same email as above 
+      
