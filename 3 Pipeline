@@ -4,7 +4,7 @@ Build :
     Freestyle
   Step 2 : 
     Description : Maven Web Build Demo
-    Git : Maven Java : https://github.com/AnishaPaturi/Maven-Java.git
+    Git : Maven Java : https://github.com/AnishaPaturi/Maven_Web.git
     Branch -> main
   Step 3 : Build 
     Invoke top-level Maven targets 
