@@ -9,3 +9,21 @@ kubectl describe pods
 kubectl expose deployment mynginx --type=NodePort --port=80 --target-port=80
 kubectl get-service mynginx
 kubectl port-forward svc/nginx 80:80
+
+
+
+docker pull neksha/hubimg-web-app-222-- already pushed img in hub
+minikube start --driver=docker
+minikube status
+kubectl create deployment mywebapp --image=neksha/hubimg-web-app-222:latest
+kubectl get deployments
+kubectl get pods
+kubectl scale deployment mywebapp --replicas=4
+kubectl expose deployment mywebapp --type=NodePort --port=8080
+kubectl get svc
+kubectl port-forward svc/mywebapp 9999:8080
+
+
+
+To Know how many containers are actually running : kubectl get pods -o wide
+or kubectl describe deployment mywebapp
