@@ -18,10 +18,10 @@ Build :
 
 Test : 
   Step 1 : 
-      New Item : maven_java_build
+      New Item : maven_java_test
       Freestyle
     Step 2 : 
-      Description : Maven Java Build Demo
+      Description : Maven Java Test Demo
       none 
       Delete Workspace 
     Step 3 : Build 
