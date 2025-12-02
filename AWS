@@ -1,0 +1,66 @@
+Step 1: Click on Modules.
+Step 2: Scroll down and select Launch AWS Academy Lab.
+Step 3: Click Start Lab.
+Step 4: Click AWS, then in Services, select EC2.
+Step 5: Go to Instances → Launch Instance.
+Step 6: Enter instance name: [Anything]
+Step 7:
+  Select Ubuntu Server
+  Architecture: 64-bit (x86)
+  Instance type: t3.micro (free-tier)
+Step 8: 
+  Create new Key Pair
+  Key pair type: RSA
+  Format: .pem
+  Click Create key pair
+Step 9: Network Settings
+  Select Create Security Group
+  Give SG name
+  Click Edit (top right)
+    Type: All Taffic
+    Source: Anywhere 
+Step 10: Storage
+  Size: 8GB
+  Number of instances: 1
+  Click Launch Instance
+Step 11: Instance creation begins → Success message appears.
+Step 12: Go to Instances, rename instance if needed
+Step 14: Click Connect → SSH Client → copy SSH command
+Step 15: On your local machine:
+  Navigate to folder containing your .pem key
+  Use the SSH command copied from AWS:
+    ssh -i "week-122.pem" ubuntu@ec2-xx-xx-xx-xx.compute.amazonaws.com
+Step 16: Check versions
+  docker --version
+  git --version
+  sudo su
+  sudo apt-get update
+  sudo apt-get install docker.io
+  git clone <>
+  ls
+  nano Dockerfile :
+    # Use Tomcat 9 as base image
+    FROM tomcat:9.0
+    
+    # Copy your built WAR into Tomcat’s webapps folder
+    COPY target/*.war /usr/local/tomcat/webapps/ROOT.war
+    
+    # Start Tomcat
+    CMD ["catalina.sh", "run"]
+
+  sudo docker build -t img1 .
+  sudo docker run -d -p 8081:8080 img1
+  sudo docker images
+  sudo docker ps -a
+
+Step 16 : 
+Go to aws 
+Active Link 
+paste in incognito
+
+
+
+
+
+
+
