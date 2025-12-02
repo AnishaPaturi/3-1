@@ -28,7 +28,7 @@ Test :
       Invoke top-level Maven targets :
         test 
       Copy artifacts from another project : 
-        maven_java_build
+        maven_web_build
         **/*
     Step 4 : Post Build
       Archive the artifacts : **/*
@@ -46,7 +46,7 @@ Deploy :
       Delete Workspace 
     Step 3 : Build 
       Copy artifacts from another project : 
-        maven_java_test
+        maven_web_test
         **/*
     Step 4 : Post Build
       Deploy war/ear to a container
