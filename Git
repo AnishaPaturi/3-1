@@ -1,9 +1,61 @@
-git config --list
+Global : 
+  git config --list
+  
+  git config --global --unset user.name
+  git config --global --unset user.email
+  
+  git config --global user.name "Anisha-Paturi"
+  git config --global user.email "paturi.anisha@gmail.com"
+  
+  git config --list
 
-git config --global --unset user.name
-git config --global --unset user.email
 
-git config --global user.name "Anisha-Paturi"
-git config --global user.email "paturi.anisha@gmail.com"
+SSH : 
+  Delete Old Key : 
+    cd %USERPROFILE%\.ssh
+    dir
+    del *
+    dir
+    cd ..
 
-git config --list
+  Generate a new SSH key : 
+    ssh-keygen -t ed25519 -C "paturi.anisha@gmail.com"
+    Then the terminal will ask:
+      Enter file to save key → press ENTER
+      Enter passphrase → press ENTER
+      Confirm passphrase → press ENTER
+      This creates two files inside .ssh:
+          id_ed25519 → private key
+          id_ed25519.pub → public key (this goes to GitHub)
+  In Git Bash:
+    eval $(ssh-agent -s) -> This starts the agent.
+    Add your key: ssh-add ~/.ssh/id_ed25519
+    If successful it says: Identity added: /home/.../id_ed25519
+
+Copy the PUBLIC key to GitHub :
+  cat ~/.ssh/id_ed25519.pub
+  Copy the ENTIRE output.
+  Then : 
+  Go to GitHub
+  Settings → SSH and GPG Keys
+  New SSH Key
+  Paste → Save
+  Done.
+
+Test your SSH connection : 
+Run: ssh -T git@github.com
+If everything is correct, you'll get: Hi <your-username>! You've successfully authenticated.
+
+Set up your Git repo
+  Now connect your project folder.
+  Open Git Bash in your project:
+  git init
+  git add .
+  git commit -m "Initial commit"
+
+Go to GitHub → Create new repo → Select SSH URL, looks like:
+git@github.com:username/repo-name.git
+Add remote : git remote add origin git@github.com:username/repo-name.git
+Push : git push -u origin main
+
+
