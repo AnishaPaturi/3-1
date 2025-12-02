@@ -1,0 +1,8 @@
+git clone https://github.com/AnishaPaturi/se-java-maven-final.git
+cd se-java-maven-final
+mvn clean package
+docker build -t image1 .
+docker run -d image1
+docker login 
+docker tag image1 anishapaturi/img:latest
+docker push anishapaturi/img:latest
