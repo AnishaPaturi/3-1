@@ -7,7 +7,7 @@ kubectl get pods
 kubectl get deployments
 kubectl describe pods
 kubectl expose deployment mynginx --type=NodePort --port=80 --target-port=80
-kubectl get-service mynginx
+kubectl get service mynginx
 kubectl port-forward svc/nginx 80:80
 
 
