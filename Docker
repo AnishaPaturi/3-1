@@ -5,4 +5,4 @@ docker build -t image1 .
 docker run -d image1
 docker login 
 docker tag image1 anishapaturi/img:latest
-docker push anishapaturi/img:latest
+docker push anishapaturi/img
