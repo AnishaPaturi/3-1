@@ -110,7 +110,13 @@ Step 3 :
   Run on server
 
 Step 4 :
-  Local terminal as gitbash : push to a repo 
+  Local terminal as gitbash : push to a repo
+git init
+git add .
+git commit -m "initial commit"
+git remote add origin <repo-link>
+git push -u origin main
+
 
 Step 5 :
   Dockerfile : 
