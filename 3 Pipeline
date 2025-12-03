@@ -56,5 +56,20 @@ Deploy :
           Credentials : Tomcat Manager 
           [ win + R : cmd 
             tomcat/apcahe/bin/startup.bat -----> To see the port number ]
+{
+  Jenkins manager -> Credentials -> global -> Add -> username : admin ; password : admin ; ID : tomcat-creds -> save 
+  tomcat/conf/cmd -> notepad tomcat-users.xml : 
+  <?xml version="1.0" encoding="UTF-8"?>
+  <tomcat-users>
+  
+      <!-- Roles needed for Jenkins automation deployments -->
+      <role rolename="manager-script"/>
+      <role rolename="manager-status"/>
+  
+      <!-- DO NOT ADD manager-gui or manager-jmx for Jenkins -->
+      <user username="admin" password="admin" roles="manager-script,manager-status"/>
+  
+  </tomcat-users>
+}
     Step 5 : Apply and save 
       Build now
