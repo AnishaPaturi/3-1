@@ -1,6 +1,6 @@
 git clone https://github.com/AnishaPaturi/se-java-maven-final.git
 cd se-java-maven-final
-notepad docker-compose.yaml:
+notepad docker-compose.yml:
 version: "3.9"
 
 services:
