@@ -23,7 +23,7 @@ Step 5 :
 Step 6 : 
   In git repo -> settings 
   webhooks -> new webhook 
-  payload Url - paste the ngrok link/github/webhook/
+  payload Url - paste the ngrok link/github-webhook/
   save 
 Step 7 : 
   Make a commit to check the working 
